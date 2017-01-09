@@ -1,0 +1,17 @@
+{
+  "name": "paypal-integration-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "paypal-ipn": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "R.J. Steinert",
+  "license": "ISC"
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Checkout</title>
+</head>
+<body>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="<your account email address>">
+    <!-- Specify a Buy Now button. -->
+    <input type="hidden" name="cmd" value="_xclick">
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name" value="MagicProduct1">
+    <input type="hidden" name="amount" value="0.01">
+    <input type="hidden" name="custom" value='{"userId":"bob"}'>
+    <!-- Return URL -->
+    <INPUT TYPE="hidden" NAME="return" value="<your server's IP address or domain>/success.html">
+    <!-- Notify URL for server communication on success or fail -->
+    <INPUT TYPE="hidden" NAME="notify_url" value="<your server's IP address or domain>/api/ipn">
+    <!-- Display the payment button. -->
+    <input type="image" name="submit" border="0"
+      src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png"
+      alt="Buy Now">
+    <img alt="" border="0" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+  </form>
+</body>
+</html>
